@@ -1,0 +1,58 @@
+# Selected ordered lines from the original loader log.
+# Original SHA-256: cdf72dbcf5a01bf1e0a4abad3e53938ae751d54ec9647671c68fdec77f8548de
+# Prefix LNNN is the original 1-based line number. Omitted lines are not reproduced.
+# UEFI root prefix removed from the C-load marker filename; raw register values unchanged.
+# Generic FACTORY READOUT wording and EXCI are preserved as observations, not endorsed interpretations.
+
+L003: [INFO ] loader::guarded: GUARDED AUTO: one-use permission replaces keyboard confirmation; all hardware guards remain mandatory
+L013: [INFO ] loader::tx_fwsec: layout inputs: fb_mib=0xbadf5040 vga=0x00000001 mmu_plm=0xbadf5040 mmu_lo=0x00100000 mmu_hi=0x054ffff0 image=0x1bfadc8 boot=0x6000
+L014: [INFO ] loader::tx_fwsec: layout: LOCAL_MEMORY_RANGE 0x000002c9 decoded usable FB = 22528 MiB (ecc=false) - driver source
+L017: [INFO ] loader::tx_fwsec: layout: fb=0x580000000 vga=0x57ff00000 frts=0x57fe00000 wpr=[0x578800000,0x57ff00000]
+L019: [INFO ] loader::guarded: GUARDED AUTO: one-use permission deleted and flushed; proceeding in 10 seconds, any key aborts
+L076: [INFO ] loader::tx_fwsec: layout inputs: fb_mib=0xbadf5040 vga=0x00000001 mmu_plm=0xbadf5040 mmu_lo=0x00100000 mmu_hi=0x054ffff0 image=0x1bfadc8 boot=0x6000
+L077: [INFO ] loader::tx_fwsec: layout: LOCAL_MEMORY_RANGE 0x000002c9 decoded usable FB = 22528 MiB (ecc=false) - driver source
+L080: [INFO ] loader::tx_fwsec: layout: fb=0x580000000 vga=0x57ff00000 frts=0x57fe00000 wpr=[0x578800000,0x57ff00000]
+L082: [INFO ] loader::tx_fwsec: FWSEC-TU10X: BSI_SCRATCH15=0x202039bf handoff=1 (DONE=3)
+L083: [INFO ] loader::tx_fwsec: FWSEC-TU10X: imem ns 0..0x400 + sec 0x400+0x9600 dmem 0x3f0 @img 0x9a00 iface@0xe0 stored=0x9df0
+L118: [INFO ] loader::tx_fwsec: FWSEC mapper patched: frts=0x57fe00000 cmd@0x3b0
+L123: [INFO ] loader::tx_fwsec: FWSEC-TU10X: GSP reset done: rm=0x162000a1 cpuctl=0x00000010 chip=0x162000a1
+L124: [INFO ] loader::tx_fwsec: FWSEC-TU10X: FBIF trans4=0x00000015 (want 0x15) dmactl cleared
+L125: [INFO ] loader::tx_portal: PORTAL: DMEM loaded - 84 bytes at dest=0x0
+L126: [INFO ] loader::tx_fwsec: FWSEC-TU10X: BL at IMEM dst=0xfe00 (hwcfg 256 blocks), BOOTVEC=0xfd00  <== dst != 0xfd00 (50HX saw 0xfd00 on TU102/TU106)
+L127: [INFO ] loader::tx_portal: PORTAL: IMEM loaded - 2 blocks, 512 bytes, dest=0xfe00 va=0xfd00 secure=false
+L128: [INFO ] loader::tx_fwsec: FWSEC-TU10X: STARTCPU, polling WPR2 up (5s budget)...
+L129: [INFO ] loader::tx: TX: fwsec ok (WPR2 verified)
+L130: [INFO ] loader::tx: TX: tu10x BL topology pinned: size 0x6000 code@0x1800 data@0x800 manifest@0x0
+L131: [INFO ] loader::tx: TX: booter bundle ok (image 59136 sigs 16)
+L140: [INFO ] loader::tx_booter: WprMeta tu10x driver-exact heap: off=0x577600000 size=0x6b00000 wpr_start=0x577500000 flags=0x1 (deploy marker: driver formula vs 40HX dmesg 0x1f7900000+0x6900000)
+L141: [INFO ] loader::tx: TX: WprMeta published (payload_mode=true)
+L166: [INFO ] loader::tx: TX-tu10x: tx-sec2-c-load.txt present - C-reference SEC2 fire (no reset, quiet window)
+L167: [INFO ] loader::tx_booter: BOOTER-C: entry halted ok (CPUCTL=0x00000010) - no reset, as-POSTed state kept
+L168: [INFO ] loader::tx_booter: BOOTER-C: FBIF CTL 0x00000110 -> 0x00000190 (bit7), DMACTL=0, TRANSCFG untouched
+L169: [INFO ] loader::tx_portal: PORTAL: IMEM loaded - 1 blocks, 256 bytes, dest=0x0 va=0x0 secure=false
+L170: [INFO ] loader::tx_portal: PORTAL: IMEM loaded - 132 blocks, 33792 bytes, dest=0x100 va=0x100 secure=true
+L171: [INFO ] loader::tx_portal: PORTAL: DMEM loaded - 25088 bytes at dest=0x0
+L172: [INFO ] loader::tx_booter: BOOTER-C: portal verify ok (imem 0xce100049 dmem 0x67436032)
+L173: [INFO ] loader::tx_booter: BOOTER-C: fire meta dev=0x10001f000 mbox0=0x0001f000 mbox1=0x00000001 BOOTVEC=0 START (quiet window next - no MMIO for 3s)
+L174: [INFO ] loader::tx_booter: BOOTER-C: post-quiet CPUCTL=0x00000010 mailbox0=0x0 mailbox1=0x1 exci=0x00900100 (verdict lands in POST-BOOT)
+L175: [INFO ] loader::tx: TX: booter fired
+L176: [INFO ] loader::tx: POST-BOOT GUARDED: GSP_CPUCTL=Some(00000010) SEC2_CPUCTL=Some(00000010) FEAT_PLM=Some(ffffffff) WPR2_HI=Some(00000000)
+L177: [INFO ] loader::tx: POST-BOOT GUARDED: failure_mask=0x00 (bit0=GSP halt, bit1=SEC2 halt, bit2=PLM open, bit3=WPR2 cleared; None=read failure)
+L178: [INFO ] loader::tx_booter: POST-BOOT: FEAT_PLM=0xffffffff SS0=0x2000015 SS1=0x3 (Turing 0x4096xx block)
+L179: [INFO ] loader::tx_booter: POST-BOOT: FACTORY FEAT_READOUT_1=0xbadf5040 (0 = full speed; badf5040 = PLM still closed)
+L180: [INFO ] loader::tx_booter: POST-BOOT: SEC2 MAILBOX0=0x00000000 WPR2_HI=0x0
+L181: [INFO ] loader::tx: TX: execution verified
+L182: [INFO ] loader::tx_booter: selector read: SS0=0x2000015 expected_unlock=0x88888888
+L183: [INFO ] loader::tx_booter: selector write: SS0=0x88888888
+L184: [INFO ] loader::tx_booter: selector read: SS1=0x3 expected_unlock=0x8
+L185: [INFO ] loader::tx_booter: selector write: SS1=0x8
+L186: [INFO ] loader::tx: SELECTOR RESULT: SS0=0x88888888 SS1=0x8
+L201: [INFO ] loader::tx: TU10X FEAT sweep 0x40964c = 0xffffff8f
+L202: [INFO ] loader::tx: TU10X FEAT sweep 0x409650 = 0xffffffff
+L209: [INFO ] loader::tx: TU10X FEAT sweep 0x409670 = 0xffffff8f
+L239: [INFO ] loader::tx: TX: stock signature restored
+L240: [INFO ] loader::tx: TU10X PLM relock: plm=0xffffffef (want 0xffffff8f) SS0=0x88888888 SS1=0x00000008 unlock_persist=true
+L241: [INFO ] loader::tx: TX-tu10x: FLR skipped (Turing FEAT PLM does not survive FLR - the unlock ships as-is; booter sanitize was the cleanup)
+L242: [INFO ] loader::tx: TX-tu10x: reconnect skipped (tu10x-no-reconnect marker)
+L243: [INFO ] loader::guarded: GUARDED: active transaction failed EIO
+L244: [INFO ] loader::guarded: GUARDED STOP: no retry, reset, reconnect or OS handoff. Fully power off manually.

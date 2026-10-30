@@ -1,0 +1,9 @@
+[package]
+name = "tu102-guard"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Pure bounded ROM and preflight policy for the experimental MSI TU102 candidate"
+
+[dependencies]
+sha2 = { version = "0.10", default-features = false }

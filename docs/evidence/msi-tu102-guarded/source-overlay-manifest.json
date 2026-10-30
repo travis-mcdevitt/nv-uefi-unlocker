@@ -1,0 +1,148 @@
+{
+  "base_repository": "https://github.com/physicsdolphin/nv-uefi-unlocker",
+  "base_commit": "3bb069bf5783d3a95d8f1ba545b41224e102defc",
+  "license": "GPL-2.0-only",
+  "files": [
+    {
+      "path": ".cargo/config.toml",
+      "original_sha256": "efbe3063be68df50caf62f94a2c90d8779c60a83e636856ae429af0155497f9a",
+      "published_sha256": "efbe3063be68df50caf62f94a2c90d8779c60a83e636856ae429af0155497f9a",
+      "sanitization": []
+    },
+    {
+      "path": "Cargo.lock",
+      "original_sha256": "526a6fe7fd7d12959d60778019e2dc6a81cfac73cef584c11590f555a7a39334",
+      "published_sha256": "526a6fe7fd7d12959d60778019e2dc6a81cfac73cef584c11590f555a7a39334",
+      "sanitization": []
+    },
+    {
+      "path": "Cargo.toml",
+      "original_sha256": "dc53983784da499669a1c7b9a743de73dea35036f86580141a330aba46b50f67",
+      "published_sha256": "dc53983784da499669a1c7b9a743de73dea35036f86580141a330aba46b50f67",
+      "sanitization": []
+    },
+    {
+      "path": "docs/guarded-msi-2080ti.md",
+      "original_sha256": "c7e8286f67b92fd0686c562c38f9d774569cf696308c87c4df285877a1b94fc4",
+      "published_sha256": "2ac6a22eafcf6a49b3fbd102da49432916052edd9f5a1442bbb3d82cb43c5711",
+      "sanitization": [
+        "Replaced operator-specific PATH command with a generic toolchain setup comment."
+      ]
+    },
+    {
+      "path": "guard/Cargo.toml",
+      "original_sha256": "754a0d8f0c836f35e94ea24b8dfc256159ab04fbfb473b8881be3bd927009bdd",
+      "published_sha256": "754a0d8f0c836f35e94ea24b8dfc256159ab04fbfb473b8881be3bd927009bdd",
+      "sanitization": []
+    },
+    {
+      "path": "guard/src/lib.rs",
+      "original_sha256": "4349c2d1dd54a168522621e1ddb023e129419e9e84727f483ae4bfb8ee0d72f8",
+      "published_sha256": "4349c2d1dd54a168522621e1ddb023e129419e9e84727f483ae4bfb8ee0d72f8",
+      "sanitization": []
+    },
+    {
+      "path": "guard/tests/final_state.rs",
+      "original_sha256": "b8fc6e5c6df0956317289f70bddea1538afd3cc683e93d5e0b706b182639dc00",
+      "published_sha256": "b8fc6e5c6df0956317289f70bddea1538afd3cc683e93d5e0b706b182639dc00",
+      "sanitization": []
+    },
+    {
+      "path": "guard/tests/one_shot.rs",
+      "original_sha256": "6466d248722379f6ca805311137cedc4f56e8d3043d09178c5c37ffd6ec716d4",
+      "published_sha256": "6466d248722379f6ca805311137cedc4f56e8d3043d09178c5c37ffd6ec716d4",
+      "sanitization": []
+    },
+    {
+      "path": "guard/tests/policy.rs",
+      "original_sha256": "9b2291c8092b6e04f4c6c6165f98839b06997d7fedf14eb358c5c1e1feb378fe",
+      "published_sha256": "9b2291c8092b6e04f4c6c6165f98839b06997d7fedf14eb358c5c1e1feb378fe",
+      "sanitization": []
+    },
+    {
+      "path": "guard/tests/post_boot.rs",
+      "original_sha256": "25063cdef5b51a428b26f693fa6822d18e5daa9ec4b27015d4507529702d7a7f",
+      "published_sha256": "25063cdef5b51a428b26f693fa6822d18e5daa9ec4b27015d4507529702d7a7f",
+      "sanitization": []
+    },
+    {
+      "path": "loader/Cargo.toml",
+      "original_sha256": "807a1356e7d9301f6b92eff35e236ae527bc39ccc88110fab1819637240a66a5",
+      "published_sha256": "807a1356e7d9301f6b92eff35e236ae527bc39ccc88110fab1819637240a66a5",
+      "sanitization": []
+    },
+    {
+      "path": "loader/src/chainload.rs",
+      "original_sha256": "e4409cad1ebea8789b77b89b40cea92efccc7b6d76787d5b28ef8c7a7e86dc2e",
+      "published_sha256": "e4409cad1ebea8789b77b89b40cea92efccc7b6d76787d5b28ef8c7a7e86dc2e",
+      "sanitization": []
+    },
+    {
+      "path": "loader/src/guarded.rs",
+      "original_sha256": "7b1cf29d502bbfc7bd25f7f99cb6d3118668b6ca91ce700db358fd06495cb888",
+      "published_sha256": "7b1cf29d502bbfc7bd25f7f99cb6d3118668b6ca91ce700db358fd06495cb888",
+      "sanitization": []
+    },
+    {
+      "path": "loader/src/keywait.rs",
+      "original_sha256": "900559ee60b5a2a5e36ff991123b69a8c97a2564479feb8fb16f5e42b716147e",
+      "published_sha256": "900559ee60b5a2a5e36ff991123b69a8c97a2564479feb8fb16f5e42b716147e",
+      "sanitization": []
+    },
+    {
+      "path": "loader/src/logging.rs",
+      "original_sha256": "4ea285a5b6b23ebf547f1fe77f6852b80a557d3beeb99a7efe4f6c2cbbb8d37e",
+      "published_sha256": "4ea285a5b6b23ebf547f1fe77f6852b80a557d3beeb99a7efe4f6c2cbbb8d37e",
+      "sanitization": []
+    },
+    {
+      "path": "loader/src/main.rs",
+      "original_sha256": "05426aa7cca88dc8d4c5a66f7df37a8c2f0694f12e39cd703423f87d7271ba8c",
+      "published_sha256": "05426aa7cca88dc8d4c5a66f7df37a8c2f0694f12e39cd703423f87d7271ba8c",
+      "sanitization": []
+    },
+    {
+      "path": "loader/src/pci.rs",
+      "original_sha256": "a545d15a6d390d1256f9dc38a0d89c6dbe3124ff4354d3e152e830d66b28a484",
+      "published_sha256": "a545d15a6d390d1256f9dc38a0d89c6dbe3124ff4354d3e152e830d66b28a484",
+      "sanitization": []
+    },
+    {
+      "path": "loader/src/tx.rs",
+      "original_sha256": "ff7e19907bc59aa7ed941f5a27b916afd72f8fb6ff8820aac3be9bf7f36dc9de",
+      "published_sha256": "ff7e19907bc59aa7ed941f5a27b916afd72f8fb6ff8820aac3be9bf7f36dc9de",
+      "sanitization": []
+    },
+    {
+      "path": "loader/src/tx_detach.rs",
+      "original_sha256": "93e602b26b76e4dcffc4114a00b3aa01a5c5ab701fbe7dbf4b45766f443a4503",
+      "published_sha256": "93e602b26b76e4dcffc4114a00b3aa01a5c5ab701fbe7dbf4b45766f443a4503",
+      "sanitization": []
+    },
+    {
+      "path": "loader/src/tx_fwsec.rs",
+      "original_sha256": "6b2b511c832ae160e4ba3de9f0911c9dee6554940d56d0c8a5028cad4af36070",
+      "published_sha256": "200a8ae05441c6f37f5eee1853a44cb7cef5cd37db722bcdfa45ccb4bed55782",
+      "sanitization": [
+        "Translated one Chinese source comment into English; executable code and runtime strings unchanged."
+      ]
+    }
+  ],
+  "all_build_inputs_byte_identical": false,
+  "historical_patch_sha256": "d943d5bac53acf4cc1b79a9feca631f91d48167df6ded4cd459a65c1e9dba13d",
+  "historical_source_manifest_sha256": "625620fde99781da7d06d5f67ad267edc8e304a564a44b5d97b612bb2de8a245",
+  "publication_changes": [
+    {
+      "path": "docs/guarded-msi-2080ti.md",
+      "scope": "Documentation only",
+      "description": "Removed the operator-specific PATH command."
+    },
+    {
+      "path": "loader/src/tx_fwsec.rs",
+      "scope": "One source comment only",
+      "description": "Translated Chinese wording into English; no executable code or runtime string changes."
+    }
+  ],
+  "runtime_code_and_strings_unchanged": true,
+  "publication_package_hardware_retest_performed": false
+}

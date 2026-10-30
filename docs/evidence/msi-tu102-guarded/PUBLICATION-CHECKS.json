@@ -1,0 +1,23 @@
+{
+  "scope": "Publication-copy inspection only; no GPU execution, firmware deployment, compilation, commit or external publication.",
+  "english_scan": "No Chinese characters remain. Translated exactly one source comment; runtime strings unchanged.",
+  "privacy_scan": "No operator identity, host absolute paths, device serial/UUID, machine boot GUID, capture timestamp or email matches.",
+  "public_protocol_guid_allowlist": [
+    {
+      "file": "source-overlay/loader/src/pci.rs",
+      "reason": "Public standard EFI_PCI_IO_PROTOCOL GUID, not a machine boot identifier."
+    }
+  ],
+  "source_overlay_files_verified": 20,
+  "publication_changes_against_hardware_tested_snapshot": [
+    "docs/guarded-msi-2080ti.md",
+    "loader/src/tx_fwsec.rs"
+  ],
+  "original_scientific_evidence_and_license_copies_unchanged": true,
+  "runtime_code_and_strings_unchanged": true,
+  "firmware_binary_rom_deployment_script_or_git_metadata_included": false,
+  "hardware_retest_performed": false,
+  "historical_validation": "The original snapshot passed 116 host tests with private fixtures and one successful hardware boot; this is not a new test result.",
+  "binary_reproducibility": "Not promised: the original build embeds a current local timestamp; the publication copy also translates one source comment.",
+  "notes": "Public repository attribution, public upstream historical dates, standard UEFI boot paths and fixed experimental hardware guard constants remain as source context, not operator identity."
+}
